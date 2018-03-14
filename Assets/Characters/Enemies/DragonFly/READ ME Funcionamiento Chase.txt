@@ -1,0 +1,10 @@
+FUNCIONAMIENTO PARA IA CHASE:
+
+1. Colocar el prefab en la escena, este tendrá un componente llamado Chase(Script)
+2. Dentro de Patrol Points, en Size se deberá colocar la cantidad de puntos de patrullaje por los que el enemigo pasará en su trayectoria
+3. Dentro de la carpeta PatrollingCP esta el prefab para colocar la cantidad de puntos de patrullaje para colocar en la escena
+4. Al colocar cada uno de los CP's, se debe arrastrar cada uno de los puntos en el script anterior, en el orden con el que se desea que el enemigo los siga
+5. Dentro de Chase, en Player, se deberá arrastrar el FPSController de la escena, personaje al que el enemigo seguirá
+6. En Speed, se colocará el valor de la velocidad deseada con la que el enemigo se moverá.
+
+Nota: Para que los CP's no se vean al momento de reproducir la escena, se selecciona el CheckPoint, y se desactiva la opción Mesh Render
