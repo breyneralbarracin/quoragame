@@ -354,7 +354,7 @@ MonoBehaviour:
   MovementSpeed: 5
   Bullet: {fileID: 54753239255613564, guid: 8fa49c03f0c4c5449b8cb4b229a9c716, type: 2}
   BulletSpeed: 100
-  scope: 85000
+  scope: 2500
   Health: 30
   ShotSound: {fileID: 8300000, guid: a401368e6b705154096165bb17e91794, type: 3}
   ExplosionSound: {fileID: 8300000, guid: 62b7ed34f1cab6c4ba8ba7530394ed46, type: 3}
