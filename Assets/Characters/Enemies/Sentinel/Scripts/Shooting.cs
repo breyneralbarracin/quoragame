@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour {
     public Rigidbody Bullet;
     public float BulletSpeed = 100f;
     public float scope = 85000;
+    public float Health = 30;
     [Space(10)]
 
     [Header("Audio Effects")]
@@ -59,12 +60,17 @@ public class Shooting : MonoBehaviour {
         {
             AllowShot = false;
             this.myTime = Time.time;
-            //Vector3 salidaDisparo = transform.position + new Vector3(0, 0, 2);
             bullets = Instantiate(Bullet, transform.position, transform.rotation);
             AudioSource.PlayClipAtPoint(ShotSound, transform.position, Volume);
-            bullets.name = "bala1";
-            //Physics.IgnoreCollision(bullets.GetComponent<Collider>(), GetComponent<Collider>());
+            bullets.tag = "bullet";
+            Physics.IgnoreCollision(bullets.GetComponent<Collider>(), GetComponent<Collider>());
             bullets.velocity = transform.TransformDirection(new Vector3(0, 0, BulletSpeed));
         }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        //los modelos que colisionen con el modelo debe tener el tag bullet
+        if (collision.gameObject.tag == "bullet") Health = Health - 5;
     }
 }

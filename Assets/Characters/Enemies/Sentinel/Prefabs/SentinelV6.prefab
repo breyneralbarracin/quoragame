@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 33360837751851274}
   - component: {fileID: 23555349669556930}
   - component: {fileID: 114174805488204910}
+  - component: {fileID: 135171559581363636}
   m_Layer: 0
   m_Name: SentinelHead
   m_TagString: Untagged
@@ -351,13 +352,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objective: {fileID: 0}
   MovementSpeed: 5
-  Bullet: {fileID: 54322272134395738, guid: 5310ff364c2e76a40a91c7d432f52243, type: 2}
+  Bullet: {fileID: 54753239255613564, guid: 8fa49c03f0c4c5449b8cb4b229a9c716, type: 2}
   BulletSpeed: 100
   scope: 85000
+  Health: 30
   ShotSound: {fileID: 8300000, guid: a401368e6b705154096165bb17e91794, type: 3}
   ExplosionSound: {fileID: 8300000, guid: 62b7ed34f1cab6c4ba8ba7530394ed46, type: 3}
   Volume: 1
   AllowShot: 1
+--- !u!135 &135171559581363636
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1246389219141948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.078409575
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198386685785898174
 ParticleSystem:
   m_ObjectHideFlags: 1
