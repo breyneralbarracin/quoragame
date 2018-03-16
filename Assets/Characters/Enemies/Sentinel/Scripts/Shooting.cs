@@ -23,6 +23,7 @@ public class Shooting : MonoBehaviour {
     private Rigidbody bullets;
     private int serie;
     private float myTime;
+    private Vector3 InitialPosition;
 
     public void setAllowShot(bool permitirDisparo) { this.AllowShot = permitirDisparo; }
     public bool getAllowShot() { return AllowShot; }
@@ -32,17 +33,21 @@ public class Shooting : MonoBehaviour {
     {
         this.serie = 0;
         this.myTime = Time.time;
+        InitialPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 Vdistance = Objective.transform.position - transform.position;
-        LookPoint();
+        
         if(Vdistance.sqrMagnitude <= scope)
         {
             gameObject.GetComponentInParent<Animator>().enabled = false;
-            Shoot();
+            LookPoint();
+            RaycastHit vision;
+            Debug.DrawRay(transform.position, transform.forward * scope, Color.red);
+            if(Physics.Raycast(transform.position, transform.forward, out vision, scope) && vision.collider.tag == "P1") Shoot();
         }else gameObject.GetComponentInParent<Animator>().enabled = true;
 
     }
