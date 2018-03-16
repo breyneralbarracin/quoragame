@@ -22,7 +22,6 @@ public class Shooting : MonoBehaviour {
     private Rigidbody bullets;
     private int serie;
     private float myTime;
-    private Vector3 InitialPosition;
 
     public void setAllowShot(bool permitirDisparo) { this.AllowShot = permitirDisparo; }
     public bool getAllowShot() { return AllowShot; }
@@ -32,7 +31,6 @@ public class Shooting : MonoBehaviour {
     {
         this.serie = 0;
         this.myTime = Time.time;
-        InitialPosition = transform.position;
     }
 
     // Update is called once per frame
