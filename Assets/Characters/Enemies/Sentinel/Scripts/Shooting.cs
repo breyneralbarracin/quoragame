@@ -6,9 +6,9 @@ public class Shooting : MonoBehaviour {
 
     [Header("Cannon Configuration")]
     public Transform Objective;
-    public float MovementSpeed = 5f;
+    public float MovementSpeed = 10f;
     public Rigidbody Bullet;
-    public float BulletSpeed = 100f;
+    public float BulletSpeed = 150f;
     public float scope = 85000;
     public float Health = 30;
     [Space(10)]
@@ -18,8 +18,7 @@ public class Shooting : MonoBehaviour {
     public AudioClip ExplosionSound;
     public float Volume = 1.0f;
 
-    [HideInInspector]
-    public bool AllowShot = true;
+    private  bool AllowShot = true;
     private Rigidbody bullets;
     private int serie;
     private float myTime;
@@ -40,14 +39,19 @@ public class Shooting : MonoBehaviour {
     void Update()
     {
         Vector3 Vdistance = Objective.transform.position - transform.position;
-        
         if(Vdistance.sqrMagnitude <= scope)
         {
             gameObject.GetComponentInParent<Animator>().enabled = false;
             LookPoint();
             RaycastHit vision;
             Debug.DrawRay(transform.position, transform.forward * scope, Color.red);
-            if(Physics.Raycast(transform.position, transform.forward, out vision, scope) && vision.collider.tag == "P1") Shoot();
+            if(Physics.Raycast(transform.position, transform.forward, out vision, scope))
+            {
+                if(vision.collider.tag == "P1")
+                {
+                    Shoot();
+                }
+            }
         }else gameObject.GetComponentInParent<Animator>().enabled = true;
 
     }
