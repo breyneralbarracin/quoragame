@@ -6,10 +6,11 @@ public class Shooting : MonoBehaviour {
 
     [Header("Cannon Configuration")]
     public Transform Objective;
-    public float MovementSpeed = 5f;
+    public float MovementSpeed = 10f;
     public Rigidbody Bullet;
-    public float BulletSpeed = 100f;
+    public float BulletSpeed = 150f;
     public float scope = 85000;
+    public float Health = 30;
     [Space(10)]
 
     [Header("Audio Effects")]
@@ -17,8 +18,7 @@ public class Shooting : MonoBehaviour {
     public AudioClip ExplosionSound;
     public float Volume = 1.0f;
 
-    [HideInInspector]
-    public bool AllowShot = true;
+    private  bool AllowShot = true;
     private Rigidbody bullets;
     private int serie;
     private float myTime;
@@ -37,11 +37,19 @@ public class Shooting : MonoBehaviour {
     void Update()
     {
         Vector3 Vdistance = Objective.transform.position - transform.position;
-        LookPoint();
         if(Vdistance.sqrMagnitude <= scope)
         {
             gameObject.GetComponentInParent<Animator>().enabled = false;
-            Shoot();
+            LookPoint();
+            RaycastHit vision;
+            Debug.DrawRay(transform.position, transform.forward * scope, Color.red);
+            if(Physics.Raycast(transform.position, transform.forward, out vision, scope))
+            {
+                if(vision.collider.tag == "P1")
+                {
+                    Shoot();
+                }
+            }
         }else gameObject.GetComponentInParent<Animator>().enabled = true;
 
     }
@@ -59,12 +67,17 @@ public class Shooting : MonoBehaviour {
         {
             AllowShot = false;
             this.myTime = Time.time;
-            //Vector3 salidaDisparo = transform.position + new Vector3(0, 0, 2);
             bullets = Instantiate(Bullet, transform.position, transform.rotation);
             AudioSource.PlayClipAtPoint(ShotSound, transform.position, Volume);
-            bullets.name = "bala1";
-            //Physics.IgnoreCollision(bullets.GetComponent<Collider>(), GetComponent<Collider>());
+            bullets.tag = "bullet";
+            Physics.IgnoreCollision(bullets.GetComponent<Collider>(), GetComponent<Collider>());
             bullets.velocity = transform.TransformDirection(new Vector3(0, 0, BulletSpeed));
         }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        //los modelos que colisionen con el modelo debe tener el tag bullet
+        if (collision.gameObject.tag == "bullet") Health = Health - 5;
     }
 }
