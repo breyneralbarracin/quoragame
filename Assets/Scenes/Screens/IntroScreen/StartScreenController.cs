@@ -15,7 +15,7 @@ public class StartScreenController : MonoBehaviour {
 	 */
 	void Start () {
 		AudioSource audio = GetComponent<AudioSource>();
-		audio.PlayDelayed (100); // Espere 100 milisegundos antes de iniciar.
+		audio.PlayDelayed (200); // Espere 100 milisegundos antes de iniciar.
 		audio.loop = true;
 	}
 
