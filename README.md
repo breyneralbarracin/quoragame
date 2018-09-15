@@ -20,7 +20,7 @@ This guide is to download the repository and colaborate with the game, there are
 
 For Windows users:
 
-> **IMPORTANT!!** : Please, before sending any change to the repo verify that you are using **EXACTLY** this Unity version: **``` 2017.3.1.f1 Personal ```**
+> **IMPORTANT!!** : Please, before sending any change to the repo verify that you are using **EXACTLY** this Unity version: **``` 2018.1.6f1 Personal ```**
 
 1. Download git https://git-scm.com/downloads
 2. Create a public github account
