@@ -1,27 +1,32 @@
 fileFormatVersion: 2
-guid: 8a1d17e191544e845a9d961850038f80
+guid: 92704cb3cb053954f90270602ee38502
+timeCreated: 1534017910
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Armature
-    100004: Bone
-    100006: Bone_001
-    100008: Bone_002
-    100010: Sphere
-    400000: //RootNode
-    400002: Armature
-    400004: Bone
-    400006: Bone_001
-    400008: Bone_002
-    400010: Sphere
-    2100000: None__alient_plant_texture_png
-    4300000: Sphere
+    100000: Armature
+    100002: Bone
+    100004: Bone_001
+    100006: Bone_002
+    100008: Bone_003
+    100010: Bone_004
+    100012: Cylinder_001
+    100014: //RootNode
+    400000: Armature
+    400002: Bone
+    400004: Bone_001
+    400006: Bone_002
+    400008: Bone_003
+    400010: Bone_004
+    400012: Cylinder_001
+    400014: //RootNode
+    2100000: None__UV_Mineral_png
+    4300000: Cylinder_001
     7400000: Default Take
     7400002: ArmatureAction
-    7400004: ArmatureAction_001
     9500000: //RootNode
-    13700000: Sphere
+    13700000: Cylinder_001
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -41,7 +46,6 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
