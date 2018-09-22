@@ -4,7 +4,7 @@
 
 Quora is a free open source video game used to teach some basic game development using the Unity Engine, the colaborators of this project are basically students of the Universidad Autónoma de Occidente UAO in Cali Colombia.
 
-## Story Plot
+## Story Plot 2
 
 Is the future year 3145 A.D the Homo Sapiens has been vanished from five planets (Earth, Moon, Mars and Europa) in the solar system for unknown reasons, Only Earth 2 and it´s moon Quora are known as the latest Homo Sapiens Colonies. Earth 2 has lost contact with any Homo Sapiens in Quora (4 years ago),  Quora is at 2 years travel distance from Earth 2 a first mission was sent to the planet looking to solve the mistery but the contact was lost. Earth 2 has send one last mission with no return ticket of one man the Astronaut, Physicist and Soldier Commander Alexandre Bob Martinez Wang.
 
