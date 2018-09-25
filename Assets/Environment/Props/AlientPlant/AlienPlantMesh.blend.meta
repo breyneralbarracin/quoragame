@@ -1,47 +1,35 @@
 fileFormatVersion: 2
-guid: a5d592cf4ddbfe2469eeb7e9aabb5ac8
+guid: 1389d7a28030153478246e21c32c0999
+timeCreated: 1533414177
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Box02
-    100004: Cylinder02
-    100006: Cylinder03
+    100002: Armature
+    100004: Bone
+    100006: Bone_001
+    100008: Bone_002
+    100010: Sphere
     400000: //RootNode
-    400002: Box02
-    400004: Cylinder02
-    400006: Cylinder03
-    2300000: Box02
-    2300002: Cylinder02
-    2300004: Cylinder03
-    3300000: Box02
-    3300002: Cylinder02
-    3300004: Cylinder03
-    4300000: Box02
-    4300002: Cylinder02
-    4300004: Cylinder03
-    2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Box02Mat
-    second: {fileID: 2100000, guid: 74bf6fc3409cf45418acbade9f5076b6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cylinder02Mat
-    second: {fileID: 2100000, guid: 757b60e91d0b82744b9fe7c1df30e1ff, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cylinder03Mat
-    second: {fileID: 2100000, guid: d00ee41123e7470429d8356b4f94b55b, type: 2}
+    400002: Armature
+    400004: Bone
+    400006: Bone_001
+    400008: Bone_002
+    400010: Sphere
+    2100000: None__alient_plant_texture_png
+    4300000: Sphere
+    7400000: Default Take
+    7400002: ArmatureAction
+    7400004: ArmatureAction_001
+    9500000: //RootNode
+    13700000: Sphere
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -55,7 +43,6 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -81,7 +68,7 @@ ModelImporter:
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    indexFormat: 1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -111,7 +98,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

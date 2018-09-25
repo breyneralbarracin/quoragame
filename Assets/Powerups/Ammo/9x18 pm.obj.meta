@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 3f250bd08e9ca9e45a08da31fc97dff6
-timeCreated: 1517084574
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -172,172 +170,173 @@ ModelImporter:
     4300060: shell_casing026
     4300062: shell_casing028
     4300064: shell_casing030
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: boxMat
-    second: {fileID: 2100000, guid: e7c7b218db9ca0c40bcd025a59e2a114, type: 2}
+    second: {fileID: 2100000, guid: 807b7f2c6097bf24992b3770f681f897, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet001Mat
-    second: {fileID: 2100000, guid: fc3f82fc5d3d3b845914d9a312b95f6a, type: 2}
+    second: {fileID: 2100000, guid: 9576b6d419d05c546b93fa8cd22c4f5d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet002Mat
-    second: {fileID: 2100000, guid: c59b185909074b74181877f5657c4f87, type: 2}
+    second: {fileID: 2100000, guid: 37da44cd84e21db49a7d80c95ec1facd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet003Mat
-    second: {fileID: 2100000, guid: 2d8b961ae5c6ac94c81924855068ea90, type: 2}
+    second: {fileID: 2100000, guid: 423f4197392ea7b4f96b1ee316f48e18, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet004Mat
-    second: {fileID: 2100000, guid: ecdb861b1f686784ba8fa19b5e582b7a, type: 2}
+    second: {fileID: 2100000, guid: 1cdbb87b73c4dc24d8ec0f1234bb6e99, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet005Mat
-    second: {fileID: 2100000, guid: cdf093068066b21409a57895f6bdf590, type: 2}
+    second: {fileID: 2100000, guid: b36db96ccc47d1847b85c6934de7f41f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet006Mat
-    second: {fileID: 2100000, guid: 9299515234ccf444dbe7b95335897779, type: 2}
+    second: {fileID: 2100000, guid: 4d926c6cf586e264e9e4d398b15d4e37, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet007Mat
-    second: {fileID: 2100000, guid: 446ffd8e047e8ba4ea68ff4dd972e8af, type: 2}
+    second: {fileID: 2100000, guid: 75cb2f4d54ac450428e4abddd4d405d0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet008Mat
-    second: {fileID: 2100000, guid: 0bf4e8836312e624182a2076f88f6860, type: 2}
+    second: {fileID: 2100000, guid: 9924c210a2638594d989c2a4e2636754, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet009Mat
-    second: {fileID: 2100000, guid: 4c1c05d689f605f40a5d63bf7441f273, type: 2}
+    second: {fileID: 2100000, guid: 704922323a3df4f4cbcbfbcb5e068a05, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet010Mat
-    second: {fileID: 2100000, guid: 65041fd8ab9dfac4f87dad92f13501a8, type: 2}
+    second: {fileID: 2100000, guid: bee064a566db3834a8af787a263608d9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet011Mat
-    second: {fileID: 2100000, guid: 825339c2db3381e4c91ed62c6f45cf23, type: 2}
+    second: {fileID: 2100000, guid: 4cac462ce9cce0e4395c5397b1bd1262, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet012Mat
-    second: {fileID: 2100000, guid: 7c6393dfb2ab0674ab5e1d6c9e41909f, type: 2}
+    second: {fileID: 2100000, guid: 87fad591d7357214cbeb6523166a2f56, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet013Mat
-    second: {fileID: 2100000, guid: 4310d70bb5be5f340b0b623c87e59f39, type: 2}
+    second: {fileID: 2100000, guid: f95000cef0fb91d4b8d455ee706e27f1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet014Mat
-    second: {fileID: 2100000, guid: 21e58d430d010b0418e3a72216bc626e, type: 2}
+    second: {fileID: 2100000, guid: 372976c5b721e8648848507df10b6b87, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bullet015Mat
-    second: {fileID: 2100000, guid: fcd75f90604d64f4283c7d7b854226f3, type: 2}
+    second: {fileID: 2100000, guid: 8f8eeb8c52f598948a04dbb5aa1a8376, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bulletMat
-    second: {fileID: 2100000, guid: 09568100d117f9f43bc5b9191117f880, type: 2}
+    second: {fileID: 2100000, guid: e72f21f190b0e0d48a13193ee3da2d75, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing002Mat
-    second: {fileID: 2100000, guid: 3031eaa77afa57a4e8ca87c4943855f7, type: 2}
+    second: {fileID: 2100000, guid: bb0cba7b182750e479f459829ace2ef6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing004Mat
-    second: {fileID: 2100000, guid: 6272df20ae76bc743913a3eb7fb59940, type: 2}
+    second: {fileID: 2100000, guid: e0dc2ef621a7f6347af2c859fc4dd181, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing006Mat
-    second: {fileID: 2100000, guid: 820de9a487bfccc47830185590a725dc, type: 2}
+    second: {fileID: 2100000, guid: 26421a0ed6576664a964b0adfd4e6595, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing008Mat
-    second: {fileID: 2100000, guid: abf41066b88dcdf44927ab54a7854999, type: 2}
+    second: {fileID: 2100000, guid: 599e3fb517a12764a8fd692449a60283, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing010Mat
-    second: {fileID: 2100000, guid: ca0b232aacde5fb4c9e95715474b2776, type: 2}
+    second: {fileID: 2100000, guid: f98481d955b74d7438853a933b249aeb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing012Mat
-    second: {fileID: 2100000, guid: 2ad333e127a9a5443b7faee7471517a3, type: 2}
+    second: {fileID: 2100000, guid: 6b95f5005a60191448c3aa1cd9ac608b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing014Mat
-    second: {fileID: 2100000, guid: 1cc46e9862a15b24cbc2340e1b7a2d65, type: 2}
+    second: {fileID: 2100000, guid: a97e8eb3737965646bc9f6293fcb1e5d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing016Mat
-    second: {fileID: 2100000, guid: 4975deea2c0482c4f8dfd163a0c15bcb, type: 2}
+    second: {fileID: 2100000, guid: 4bf9aaa91010d184e8f3ac687738e126, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing018Mat
-    second: {fileID: 2100000, guid: 6b2a69a976dca7147a5d1dba6f8ffa9a, type: 2}
+    second: {fileID: 2100000, guid: 993e82062e00c6c428a0f8babd5a067c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing020Mat
-    second: {fileID: 2100000, guid: af7dc0eca70a6354db8d74bef88080bb, type: 2}
+    second: {fileID: 2100000, guid: cb7b93e0a8d6e504e8bddafddf1d1615, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing022Mat
-    second: {fileID: 2100000, guid: 2211ac389fca1be4cb2df07d2e149de3, type: 2}
+    second: {fileID: 2100000, guid: 8a0018df8fa095244a8b4f2ec141b4d7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing024Mat
-    second: {fileID: 2100000, guid: 6049a1f6017ee844daa408ed9d4a2260, type: 2}
+    second: {fileID: 2100000, guid: d44c796f84bb8f84b8dbd936d344da29, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing026Mat
-    second: {fileID: 2100000, guid: a044b1919a553c046a257beaa9d53dba, type: 2}
+    second: {fileID: 2100000, guid: 6e6819f0f0c409d47b982f83cad163a1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing028Mat
-    second: {fileID: 2100000, guid: 6c28a741f3ff06e4bb7d927c7ba79831, type: 2}
+    second: {fileID: 2100000, guid: b435fa4f99dfe3840bfc1b7bf0a00b67, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casing030Mat
-    second: {fileID: 2100000, guid: dd24c84c2ac8882449fe8c426cf4f526, type: 2}
+    second: {fileID: 2100000, guid: 425e15847167b2142acb880ead649819, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shell_casingMat
-    second: {fileID: 2100000, guid: 5a3c3c1ab0666864c91b2f59f8cb634d, type: 2}
+    second: {fileID: 2100000, guid: 6b70278a1f38325438d6fc460cb0f618, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -356,6 +355,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -380,6 +380,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
