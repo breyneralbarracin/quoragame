@@ -17,6 +17,7 @@ ModelImporter:
     2100002: puerta
     2100004: verde
     2100006: rojo
+    2100008: lambert2
     2300000: door
     2300002: doorL
     2300004: FrameFront
