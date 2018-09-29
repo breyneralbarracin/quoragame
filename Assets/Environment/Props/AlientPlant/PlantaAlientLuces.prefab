@@ -160,6 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4846734634747316}
   - component: {fileID: 95897596873838546}
+  - component: {fileID: 65760329294870982}
   m_Layer: 0
   m_Name: PlantaAlientLuces
   m_TagString: Untagged
@@ -266,9 +267,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1836282386840010}
-  m_LocalRotation: {x: -0, y: -0, z: -0.13427205, w: 0.99094456}
-  m_LocalPosition: {x: 112.08661, y: 19.36, z: 182.1}
-  m_LocalScale: {x: 2.0339427, y: 2.0339427, z: 2.0339427}
+  m_LocalRotation: {x: -0.098177925, y: 0.016580652, z: -0.025718674, w: 0.9946983}
+  m_LocalPosition: {x: 110.74669, y: 18.230183, z: 176.63942}
+  m_LocalScale: {x: 1.1653519, y: 1.1653517, z: 1.1653516}
   m_Children:
   - {fileID: 4272460826900344}
   - {fileID: 4877589012578200}
@@ -278,7 +279,7 @@ Transform:
   - {fileID: 4235042621723538}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15.433001}
+  m_LocalEulerAnglesHint: {x: -11.213, y: 2.2220001, z: -3.18}
 --- !u!4 &4877589012578200
 Transform:
   m_ObjectHideFlags: 1
@@ -306,6 +307,18 @@ Transform:
   m_Father: {fileID: 4351002648756568}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65760329294870982
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1836282386840010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.4142625, z: 2}
+  m_Center: {x: -2.1531549e-10, y: 0.20713124, z: -8.684052e-10}
 --- !u!95 &95897596873838546
 Animator:
   serializedVersion: 3
@@ -323,6 +336,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!108 &108382873535966934
 Light:
   m_ObjectHideFlags: 1
@@ -480,6 +494,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: d42a8508c32b29145b4b09eca1a0b4d6, type: 2}
   m_StaticBatchInfo:
