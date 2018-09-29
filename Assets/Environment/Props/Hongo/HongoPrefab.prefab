@@ -67,6 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4700615787112058}
   - component: {fileID: 95621398724324868}
+  - component: {fileID: 65851086282756624}
   m_Layer: 0
   m_Name: HongoPrefab
   m_TagString: Untagged
@@ -364,8 +365,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355872464939600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -62.05534, y: 1.3117962, z: -39.12651}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -63.671597, y: 1.4717963, z: -47.562073}
+  m_LocalScale: {x: 0.53669584, y: 0.53669584, z: 0.53669584}
   m_Children:
   - {fileID: 4997142483416726}
   - {fileID: 4460347261220164}
@@ -426,6 +427,18 @@ Transform:
   m_Father: {fileID: 4700615787112058}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65851086282756624
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355872464939600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.4719462, y: 7.239574, z: 7.3859777}
+  m_Center: {x: 0, y: 4.0293975, z: 0}
 --- !u!95 &95621398724324868
 Animator:
   serializedVersion: 3
