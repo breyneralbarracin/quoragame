@@ -7,10 +7,12 @@ public class BulletExplosion : MonoBehaviour {
     private Vector3 InitialPosition;
     public AudioClip ExplosionSound;
     public float Volume = 2.0f;
+    public ParticleSystem explosion;
     // Use this for initialization
     void Start () {
         scriptShot = GameObject.Find("SentinelHead").GetComponent<Shooting>();
         InitialPosition = transform.position;
+        //explosion = GameObject.Find("Explosion").GetComponent<ParticleSystem>();
     }
 	
 	// Update is called once per frame
@@ -27,7 +29,9 @@ public class BulletExplosion : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         scriptShot.setAllowShot(true);
-        Destroy(gameObject);
+        //Crear Explosion de Particulas
+        explosion.Play();
+        Destroy(gameObject,1f);
         AudioSource.PlayClipAtPoint(ExplosionSound, transform.position, Volume);
         Debug.Log("BalaImpactada en: " + collision.gameObject.name);
     }
