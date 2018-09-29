@@ -19,13 +19,13 @@ public class healthBehaviour : MonoBehaviour {
     public void TakeDamage(float amount)
     {
         hp = Mathf.Clamp(hp - amount, 0f, maxHp);
-        health.transform.localScale = new Vector2(hp / maxHp, 1);
+        health.transform.localScale = new Vector2(hp / maxHp, 0.2560809f);
     }
 
     public void TakeHelath(float amount)
     {
         hp = Mathf.Clamp(hp + amount, 0f, maxHp);
-        health.transform.localScale = new Vector2(hp / maxHp, 1);
+        health.transform.localScale = new Vector2(hp / maxHp, 0.2560809f);
     }
 
     // Update is called once per frame
