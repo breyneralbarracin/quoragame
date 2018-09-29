@@ -9,6 +9,7 @@ public class Shooting : MonoBehaviour {
     public float MovementSpeed = 10f;
     public Rigidbody Bullet;
     public float BulletSpeed = 150f;
+    public float ShotCooldown;
     public float scope = 85000;
     public float Health = 30;
     [Space(10)]
@@ -63,7 +64,7 @@ public class Shooting : MonoBehaviour {
 
     private void Shoot()
     {
-        if(AllowShot && Time.time - this.myTime >= 2f && serie % 1 == 0)
+        if(AllowShot && Time.time - this.myTime >= ShotCooldown && serie % 1 == 0)
         {
             AllowShot = false;
             this.myTime = Time.time;
