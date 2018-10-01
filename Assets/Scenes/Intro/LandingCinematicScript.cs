@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LandingCinematicScript : MonoBehaviour {
 	// CONST
@@ -150,6 +151,6 @@ public class LandingCinematicScript : MonoBehaviour {
 	}
 
 	private void cambiarASiguienteEscena() {
-		Application.LoadLevel ("escena 1");
+		SceneManager.LoadScene("escena 1", LoadSceneMode.Single);
 	}
 }

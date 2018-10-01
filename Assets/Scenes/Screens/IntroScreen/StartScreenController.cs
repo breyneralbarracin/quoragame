@@ -7,6 +7,7 @@
  */
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class StartScreenController : MonoBehaviour {
 
@@ -23,7 +24,7 @@ public class StartScreenController : MonoBehaviour {
 	 * Si el usuario presiona el boton start.
 	 */
 	public void onClickStartButton() {
-		Application.LoadLevel("LandingCinematic");
+		SceneManager.LoadScene("LandingCinematic", LoadSceneMode.Single);
 	}
 
 	/**
