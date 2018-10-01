@@ -151,6 +151,6 @@ public class LandingCinematicScript : MonoBehaviour {
 	}
 
 	private void cambiarASiguienteEscena() {
-		SceneManager.LoadScene("escena 1", LoadSceneMode.Single);
+		SceneManager.LoadScene("escena1", LoadSceneMode.Single);
 	}
 }
