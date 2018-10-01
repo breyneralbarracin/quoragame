@@ -22,7 +22,7 @@ public class BulletExplosion : MonoBehaviour {
         {
             scriptShot.setAllowShot(true);
             Destroy(gameObject);
-            Debug.Log("BalaPerdida");
+            //Debug.Log("BalaPerdida");
         }
 	}
 
@@ -33,7 +33,7 @@ public class BulletExplosion : MonoBehaviour {
         explosion.Play();
         Destroy(gameObject,1f);
         AudioSource.PlayClipAtPoint(ExplosionSound, transform.position, Volume);
-        Debug.Log("BalaImpactada en: " + collision.gameObject.name);
+        //Debug.Log("BalaImpactada en: " + collision.gameObject.name);
     }
 
 }

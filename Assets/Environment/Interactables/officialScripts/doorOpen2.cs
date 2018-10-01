@@ -57,7 +57,7 @@ public class doorOpen2 : MonoBehaviour {
 
         if (other.CompareTag("P1"))
         {
-            Debug.Log("entro");
+            //Debug.Log("entro");
             open = true;
             var Le = psLe.emission;
             var Re = psRe.emission;
@@ -73,9 +73,8 @@ public class doorOpen2 : MonoBehaviour {
     {
         if (other.CompareTag("P1"))
         {
-            Debug.Log("salio");
+            //Debug.Log("salio");
             open = false;
-           
         }
     }
 }
