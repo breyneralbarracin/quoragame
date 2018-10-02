@@ -9,8 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Screens/IntroScreen/StartScreenScene.unity
     guid: da4c42a1fbd404101a7e8529b3954c2d
   - enabled: 1
-    path: Assets/Scenes/Scene 1/escena 1.unity
+    path: Assets/Scenes/Scene1/escena1.unity
     guid: bc6dc2cf63e3437479696aa83803fa31
   - enabled: 1
     path: Assets/Scenes/Intro/LandingCinematic.unity
     guid: e2f12de79dbcea94f9b0a653dfb1f5f6
+  m_configObjects: {}
