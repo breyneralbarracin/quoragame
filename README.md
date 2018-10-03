@@ -14,7 +14,7 @@ Commander Alexandre is entering on his spaceship to the Quora atmosphere, after 
 
 ### Level 1 - Mission 1
 
-The Commander needs to shutdown the Sentinel Robot that is in "Base defend mode", but the doors of the base are locked and the switch to shutdown the robot is inside the base, find a way to entere into the base without being killed by the Sentinel.
+The Commander needs to shutdown the Sentinel Robot that is in "Base defend mode", but the doors of the base are locked and the switch to shutdown the robot is inside the base, find a way to enter into the base without being killed by the Sentinel. Watch your oxigen and temperature levels.
 
 ## Developers Guide
 
