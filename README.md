@@ -10,7 +10,11 @@ Is the future year 3145 A.D the Homo Sapiens has been vanished from five planets
 
 ## Level 1 - The landing
 
-Commander Alexandre is entering on his capsule to the Quora atmosphere to land on the planet, after his landing he will try to reach the nearest known Homo Sapiens base to discover the solitude and dangers of Quora.
+Commander Alexandre is entering on his spaceship to the Quora atmosphere, after landing near to the last known Homo Sapiens base he will discover the solitude and dangers of Quora.
+
+### Level 1 - Mission 1
+
+The Commander needs to shutdown the Sentinel Robot that is in "Base defend mode", but the doors of the base are locked and the switch to shutdown the robot is inside the base, find a way to entere into the base without being killed by the Sentinel.
 
 ## Developers Guide
 
