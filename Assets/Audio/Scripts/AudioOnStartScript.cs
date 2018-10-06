@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class AudioOnStartScript : MonoBehaviour {
 
@@ -12,8 +13,14 @@ public class AudioOnStartScript : MonoBehaviour {
 	public float delayTimeClip2 = 100;
 
     public Text refTextMessage;
+
+    private Vector3 cameraPosition;
+    private Quaternion cameraRotation;
     IEnumerator Start()
     {
+
+        this.cameraPosition = Camera.main.transform.position;
+        this.cameraRotation = Camera.main.transform.rotation;
         AudioSource audio = GetComponent<AudioSource>();
 
         audio.Play();
@@ -32,6 +39,7 @@ public class AudioOnStartScript : MonoBehaviour {
         audio.clip = clip2;
         audio.Play();
 
+        StartCoroutine(RotarCamara(0.0f));
         StartCoroutine(MostrarTexto("[!!! ALERT !!!] YOU MUST SHUTDOWN THE SENTINEL ROBOT.", 0.0f));
         StartCoroutine(MostrarTexto("The robot is in BASE_DEFEND_MODE.", 4.0f)); 
         StartCoroutine(MostrarTexto("Doors of the base are locked.", 6.0f));
@@ -39,10 +47,29 @@ public class AudioOnStartScript : MonoBehaviour {
         StartCoroutine(MostrarTexto("Find a way to enter into the base without being killed by the Sentinel.", 13.0f));
         StartCoroutine(MostrarTexto("Watch your oxigen and temperature levels.", 16.0f));
         StartCoroutine(MostrarTexto("", 20.0f));
+
+        StartCoroutine(DejarDeRotarCamara(20.0f));
     }
 
     IEnumerator MostrarTexto (string mensaje, float delayTime) {
 		yield return new WaitForSeconds(delayTime);
 		refTextMessage.text = mensaje;
 	}
+
+    IEnumerator RotarCamara(float delayTime) {
+        yield return new WaitForSeconds(delayTime);
+        GameObject.Find("MainCamera").GetComponent<HeadBob>().enabled = false;
+        GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().enabled = false;
+        GameObject.Find("MainCamera").GetComponent<CameraRotateAround>().enabled = true;
+    }
+    IEnumerator DejarDeRotarCamara(float delayTime) {
+        yield return new WaitForSeconds(delayTime);
+        GameObject.Find("MainCamera").GetComponent<CameraRotateAround>().enabled = false;
+        GameObject.Find("MainCamera").GetComponent<HeadBob>().enabled = true;
+        GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().enabled = true;
+        //Camera.main.transform.position = new Vector3(132f,9.99f,215.0f);
+
+        Camera.main.transform.position = this.cameraPosition;
+        Camera.main.transform.rotation = this.cameraRotation;
+    }
 }
