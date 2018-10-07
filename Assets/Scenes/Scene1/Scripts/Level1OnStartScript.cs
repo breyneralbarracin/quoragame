@@ -7,10 +7,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class AudioOnStartScript : MonoBehaviour {
+public class Level1OnStartScript : MonoBehaviour {
 
-	public AudioClip clip2;
-	public float delayTimeClip2 = 100;
+	public AudioClip sheThaInstructionsAudioClip;
+	public float delayTimeInSeconds = 3;
 
     public Text refTextMessage;
 
@@ -35,8 +35,8 @@ public class AudioOnStartScript : MonoBehaviour {
         StartCoroutine(MostrarTexto("", 24.0f));
 
 
-        yield return new WaitForSeconds(audio.clip.length + delayTimeClip2);
-        audio.clip = clip2;
+        yield return new WaitForSeconds(audio.clip.length + delayTimeInSeconds);
+        audio.clip = sheThaInstructionsAudioClip;
         audio.Play();
 
         StartCoroutine(RotarCamara(0.0f));

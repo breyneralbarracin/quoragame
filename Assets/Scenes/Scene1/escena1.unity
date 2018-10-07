@@ -18408,8 +18408,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1082117848}
-  m_LocalRotation: {x: 0.042917203, y: 0.93511754, z: 0.12159848, w: -0.33004108}
-  m_LocalPosition: {x: 142.33705, y: -10.477918, z: 194.31702}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalPosition: {x: 131.97, y: -1.4918871, z: 215.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -26144,11 +26144,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1756769865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09c1a6212584e1841b59d0a7e4bc2731, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bc11fa4c61254c47a9a410a74792279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip2: {fileID: 8300000, guid: f6a0032842cda594ebd0a1624568b406, type: 3}
-  delayTimeClip2: 3
+  sheThaInstructionsAudioClip: {fileID: 8300000, guid: f6a0032842cda594ebd0a1624568b406,
+    type: 3}
+  delayTimeInSeconds: 3
   refTextMessage: {fileID: 1782664912}
 --- !u!82 &1756769868
 AudioSource:
