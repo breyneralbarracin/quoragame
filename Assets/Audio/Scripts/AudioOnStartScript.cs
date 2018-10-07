@@ -16,11 +16,11 @@ public class AudioOnStartScript : MonoBehaviour {
 
     private Vector3 cameraPosition;
     private Quaternion cameraRotation;
+
+    private Vector3 characterPosition;
+    private Quaternion characterRotation;
     IEnumerator Start()
     {
-
-        this.cameraPosition = Camera.main.transform.position;
-        this.cameraRotation = Camera.main.transform.rotation;
         AudioSource audio = GetComponent<AudioSource>();
 
         audio.Play();
@@ -58,18 +58,26 @@ public class AudioOnStartScript : MonoBehaviour {
 
     IEnumerator RotarCamara(float delayTime) {
         yield return new WaitForSeconds(delayTime);
+        this.characterPosition = GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().transform.position;
+        this.characterRotation = GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().transform.rotation;
+        this.cameraPosition = Camera.main.transform.position;
+        this.cameraRotation = Camera.main.transform.rotation;
         GameObject.Find("MainCamera").GetComponent<HeadBob>().enabled = false;
         GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().enabled = false;
         GameObject.Find("MainCamera").GetComponent<CameraRotateAround>().enabled = true;
     }
     IEnumerator DejarDeRotarCamara(float delayTime) {
         yield return new WaitForSeconds(delayTime);
+
+        GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().transform.position = this.characterPosition;
+        GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().transform.rotation = this.characterRotation;
+        Camera.main.transform.position = this.cameraPosition;
+        Camera.main.transform.rotation = this.cameraRotation;
+
         GameObject.Find("MainCamera").GetComponent<CameraRotateAround>().enabled = false;
         GameObject.Find("MainCamera").GetComponent<HeadBob>().enabled = true;
         GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().enabled = true;
-        //Camera.main.transform.position = new Vector3(132f,9.99f,215.0f);
 
-        Camera.main.transform.position = this.cameraPosition;
-        Camera.main.transform.rotation = this.cameraRotation;
+
     }
 }
