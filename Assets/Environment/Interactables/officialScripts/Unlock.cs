@@ -28,8 +28,7 @@ public class Unlock : MonoBehaviour {
 	void Update () {
         if (onswitch) {
 
-            if (Input.GetKeyDown(KeyCode.E))
-            {
+            if (Input.GetKeyDown(KeyCode.E)) {
                 open = true;
                 shoot = false;
                 door.enabled=open;
@@ -39,21 +38,17 @@ public class Unlock : MonoBehaviour {
                 ligh.intensity = 0.01f;
             }
             
-}
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("P1"))
-        {
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("P1")) {
             onswitch = true;
             Debug.Log("entro");
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("P1"))
-        {
+    private void OnTriggerExit(Collider other){
+        if (other.CompareTag("P1")) {
             onswitch = false;
         }
     }
