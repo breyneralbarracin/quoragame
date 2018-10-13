@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 4689595681436238}
   - component: {fileID: 95698552094532190}
   - component: {fileID: 65618592882543218}
+  - component: {fileID: 65890610409101260}
   m_Layer: 0
   m_Name: Mini Tiburon
   m_TagString: Untagged
@@ -286,6 +287,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 4}
   m_Center: {x: 0, y: 0, z: 6}
+--- !u!65 &65890610409101260
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643631916427460}
+  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6, z: 8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95698552094532190
 Animator:
   serializedVersion: 3
