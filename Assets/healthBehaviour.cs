@@ -16,13 +16,13 @@ public class healthBehaviour : MonoBehaviour {
         hp = maxHp;
     }
 
-    public void TakeDamage(float amount)
+    public void TakeDamage()
     {
-        hp = Mathf.Clamp(hp - amount, 0f, maxHp);
+        hp = Mathf.Clamp(hp - 2f, 0f, maxHp);
         health.transform.localScale = new Vector2(hp / maxHp, 0.2560809f);
     }
 
-    public void TakeHelath(float amount)
+    public void TakeHealth(float amount)
     {
         hp = Mathf.Clamp(hp + amount, 0f, maxHp);
         health.transform.localScale = new Vector2(hp / maxHp, 0.2560809f);
@@ -31,14 +31,11 @@ public class healthBehaviour : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (hp == 0f)
         {
-            TakeDamage(amount);
-        }
+            Debug.Log("Me mori");
+            TakeHealth(100f);
 
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            TakeHelath(amount);
         }
     }
 }
