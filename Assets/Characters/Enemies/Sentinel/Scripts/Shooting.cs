@@ -6,11 +6,11 @@ public class Shooting : MonoBehaviour {
 
     [Header("Cannon Configuration")]
     public Transform Objective;
-    public float MovementSpeed = 10f;
+    private float MovementSpeed = 10f;
     public Rigidbody Bullet;
-    public float BulletSpeed = 150f;
-    public float ShotCooldown;
-    public float scope = 85000;
+    private float BulletSpeed = 150f;
+    private float ShotCooldown=2f;
+    private float scope = 2500;
     public float Health = 30;
     [Space(10)]
 
