@@ -33,7 +33,7 @@ public class healthBehaviour : MonoBehaviour {
     {
         if (hp == 0f)
         {
-            Debug.Log("Me mori");
+            
             TakeHealth(100f);
 
         }

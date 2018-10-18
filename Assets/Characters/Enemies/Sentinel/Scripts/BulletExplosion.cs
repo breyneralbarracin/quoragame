@@ -49,7 +49,7 @@ public class BulletExplosion : MonoBehaviour {
         Vector3 Distance = InitialPosition - transform.position;
         if (collision.gameObject.tag == "P1" && Distance.sqrMagnitude <= 1000)
         {
-            Debug.Log("Me pego duro");
+     
             barravida = GameObject.Find("vida");
             barravida.gameObject.GetComponent<healthBehaviour>().TakeDamage(20f);
 
