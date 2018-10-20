@@ -48,6 +48,7 @@ public class Heat : MonoBehaviour
         {
             barravida = GameObject.Find("vida");
             barravida.gameObject.GetComponent<healthBehaviour>().TakeDamage(10f);
+            timer = 0f;
 
         }
 
