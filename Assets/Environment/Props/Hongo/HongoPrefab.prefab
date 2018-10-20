@@ -68,6 +68,8 @@ GameObject:
   - component: {fileID: 4700615787112058}
   - component: {fileID: 95621398724324868}
   - component: {fileID: 65851086282756624}
+  - component: {fileID: 65538900657428802}
+  - component: {fileID: 114396542062439006}
   m_Layer: 0
   m_Name: HongoPrefab
   m_TagString: Untagged
@@ -427,6 +429,18 @@ Transform:
   m_Father: {fileID: 4700615787112058}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65538900657428802
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355872464939600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 8, z: 8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65851086282756624
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -655,6 +669,18 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114396542062439006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355872464939600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1c6c3e59d0cd64ba68255dc36aaffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mensaje: {fileID: 0}
 --- !u!137 &137613846224894232
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
