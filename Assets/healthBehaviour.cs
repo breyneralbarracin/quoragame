@@ -8,7 +8,7 @@ public class healthBehaviour : MonoBehaviour {
 
     public Image health;
     float hp, maxHp = 100f;
-    float amount = 10f;
+    //float amount = 10f;
 
     // Use this for initialization
     void Start()
@@ -16,9 +16,9 @@ public class healthBehaviour : MonoBehaviour {
         hp = maxHp;
     }
 
-    public void TakeDamage()
+    public void TakeDamage(float amount)
     {
-        hp = Mathf.Clamp(hp - 2f, 0f, maxHp);
+        hp = Mathf.Clamp(hp - amount, 0f, maxHp);
         health.transform.localScale = new Vector2(hp / maxHp, 0.2560809f);
     }
 
@@ -33,7 +33,7 @@ public class healthBehaviour : MonoBehaviour {
     {
         if (hp == 0f)
         {
-            Debug.Log("Me mori");
+            
             TakeHealth(100f);
 
         }
