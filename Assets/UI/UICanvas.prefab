@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 224475934076675050}
   - component: {fileID: 222341631407304160}
   - component: {fileID: 114233336313959056}
-  - component: {fileID: 114864367046818240}
+  - component: {fileID: 114362353092948772}
   m_Layer: 5
   m_Name: calor
   m_TagString: Untagged
@@ -443,6 +443,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114362353092948772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210474067970544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3afd9e44ca736534ba14d3af787a2fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calor: {fileID: 114233336313959056}
 --- !u!114 &114379507259634016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -619,18 +631,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114864367046818240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1210474067970544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7bc19e74cd147f429a3f04c4ffa4e8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 114233336313959056}
 --- !u!114 &114985943939626412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -833,7 +833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -24.021002, y: 46.173, z: 0.79700005}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -55, y: -55.300003}
+  m_AnchoredPosition: {x: -55, y: -55.299988}
   m_SizeDelta: {x: 146.5, y: 110.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224475934076675050
