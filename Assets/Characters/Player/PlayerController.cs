@@ -22,10 +22,10 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timeInSeconds += Time.deltaTime;
-		Debug.Log(oxygenFlag);
+		//Debug.Log(oxygenFlag);
 		if(timeInSeconds % 4f <= 0.2f && oxygenFlag)
 		{
-			Debug.Log("reducir vida");
+			//Debug.Log("reducir vida");
 			reduceOxygen(maxHealth*0.01f);
 			oxygenFlag = false;
 		}
