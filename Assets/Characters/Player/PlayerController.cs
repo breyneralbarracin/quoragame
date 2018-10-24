@@ -33,6 +33,17 @@ public class PlayerController : MonoBehaviour {
 		{
 			oxygenFlag = true;
 		}
+
+		if(health == 0)
+		{
+			print("Morí");
+			Time.timeScale =0;
+			if(Input.GetKeyDown(KeyCode.Return))
+			{
+				Time.timeScale =1;
+				health= maxHealth;
+			}
+		}
 	}
 
 	public void reduceOxygen(float cantidad)
