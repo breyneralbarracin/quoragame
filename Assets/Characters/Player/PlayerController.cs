@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 
 		if(health == 0)
 		{
-			print("Morí");
+			print("!Has muerto!");
 			Time.timeScale =0;
 			if(Input.GetKeyDown(KeyCode.Return))
 			{
