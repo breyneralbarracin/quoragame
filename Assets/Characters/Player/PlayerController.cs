@@ -44,6 +44,18 @@ public class PlayerController : MonoBehaviour {
 				health= maxHealth;
 			}
 		}
+
+		if(Input.GetKeyDown(KeyCode.P))
+		{
+			Time.timeScale =0;
+			print("Menu pausa");
+		
+		}
+			
+		if (Input.GetKeyDown(KeyCode.O) )
+		{
+				Time.timeScale =1;
+		}
 	}
 
 	public void reduceOxygen(float cantidad)
