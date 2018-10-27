@@ -311,8 +311,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 116987646}
-  m_LocalRotation: {x: 0.013601984, y: 0.9515925, z: 0.30409718, w: -0.0425631}
-  m_LocalPosition: {x: 72.1528, y: -82.63509, z: 479.14606}
+  m_LocalRotation: {x: 0.087172285, y: 0.89959055, z: 0.21045254, w: -0.37262255}
+  m_LocalPosition: {x: -305.8214, y: -11.948382, z: -101.64244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1087671818}
@@ -1089,16 +1089,26 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114632612422477932, guid: 7ff68b1d7ec61f24894e865630e10998,
+        type: 2}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1485117016}
+    - target: {fileID: 114130331815901776, guid: 7ff68b1d7ec61f24894e865630e10998,
+        type: 2}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1485117016}
+    - target: {fileID: 114666851778796562, guid: 7ff68b1d7ec61f24894e865630e10998,
+        type: 2}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1485117016}
     - target: {fileID: 223833370196039696, guid: 7ff68b1d7ec61f24894e865630e10998,
         type: 2}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 371069923}
-    - target: {fileID: 224449379475538784, guid: 7ff68b1d7ec61f24894e865630e10998,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -55.299988
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ff68b1d7ec61f24894e865630e10998, type: 2}
   m_IsPrefabParent: 0
