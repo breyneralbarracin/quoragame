@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 222341631407304160}
   - component: {fileID: 114233336313959056}
   - component: {fileID: 114362353092948772}
+  - component: {fileID: 114130331815901776}
   m_Layer: 5
   m_Name: calor
   m_TagString: Untagged
@@ -240,7 +241,7 @@ GameObject:
   - component: {fileID: 224646015448296444}
   - component: {fileID: 222084035353888204}
   - component: {fileID: 114379507259634016}
-  - component: {fileID: 114390096011734634}
+  - component: {fileID: 114632612422477932}
   m_Layer: 5
   m_Name: oxigeno
   m_TagString: Untagged
@@ -346,6 +347,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114130331815901776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210474067970544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c033be08a90ed6045968e3e8d867db7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heat: {fileID: 114233336313959056}
+  playerController: {fileID: 0}
 --- !u!114 &114153356049971344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -392,14 +406,14 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
 --- !u!114 &114310443048868114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -474,8 +488,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
@@ -493,18 +507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 312f5d0534b93c94f9e446bbd74c5f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114390096011734634
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1895512800475920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7bc19e74cd147f429a3f04c4ffa4e8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 114379507259634016}
 --- !u!114 &114489456258351228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -565,6 +567,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0/100
+--- !u!114 &114632612422477932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1895512800475920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1485c049bc2cde43879a066b9a5b73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oxygen: {fileID: 114379507259634016}
+  playerController: {fileID: 0}
 --- !u!114 &114660732340035814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -604,6 +619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 114856338932389322}
+  playerController: {fileID: 0}
 --- !u!114 &114856338932389322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -623,14 +639,14 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
 --- !u!114 &114985943939626412
 MonoBehaviour:
   m_ObjectHideFlags: 1
