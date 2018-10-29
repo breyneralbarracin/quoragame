@@ -33,6 +33,29 @@ public class PlayerController : MonoBehaviour {
 		{
 			oxygenFlag = true;
 		}
+
+		if(health == 0)
+		{
+			print("!Has muerto!");
+			Time.timeScale =0;
+			if(Input.GetKeyDown(KeyCode.Return))
+			{
+				Time.timeScale =1;
+				health= maxHealth;
+			}
+		}
+
+		if(Input.GetKeyDown(KeyCode.P))
+		{
+			Time.timeScale =0;
+			print("Menu pausa");
+		
+		}
+			
+		if (Input.GetKeyDown(KeyCode.O) )
+		{
+				Time.timeScale =1;
+		}
 	}
 
 	public void reduceOxygen(float cantidad)
