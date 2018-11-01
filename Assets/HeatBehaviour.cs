@@ -12,7 +12,7 @@ public class HeatBehaviour : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        heat.fillAmount = playerController.heat / playerController.maxHeat;
+        heat.fillAmount = playerController.stats.heat / playerController.stats.maxHeat;
         // if (hp == 0f)
         // {
         //     Debug.Log("Me mori");
