@@ -18,6 +18,15 @@ public class PlayerController : MonoBehaviour {
 		public float heat;
 	}
 
+	public UI ui;
+
+	[System.Serializable]
+	public class UI
+	{
+		public GameObject menuPausa;
+		public GameObject canvas;
+	}
+
 	private bool oxygenFlag;
 	private float timeInSeconds;
 	private bool pausado;
@@ -77,7 +86,8 @@ public class PlayerController : MonoBehaviour {
     private void pausar()
     {
         Time.timeScale = 0;
-		print("Menu pausa");
+		
+		Instantiate(ui.menuPausa, ui.menuPausa.transform.position, ui.menuPausa.transform.rotation, ui.canvas.transform);
     }
 
     public void reduceOxygen(float cantidad)
