@@ -11,7 +11,7 @@ public class OxygenBehaviour : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        oxygen.fillAmount = playerController.oxygen / playerController.maxOxygen;
+        oxygen.fillAmount = playerController.stats.oxygen / playerController.stats.maxOxygen;
         // if (hp == 0f)
         // {
         //     Debug.Log("Me mori");
