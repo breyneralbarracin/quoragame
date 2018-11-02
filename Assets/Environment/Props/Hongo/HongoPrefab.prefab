@@ -58,6 +58,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1294541891999502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4570016194182536}
+  - component: {fileID: 33279177730563620}
+  - component: {fileID: 65761756838730336}
+  - component: {fileID: 114617246689186946}
+  m_Layer: 0
+  m_Name: zonaOxigeno
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1355872464939600
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,6 +88,7 @@ GameObject:
   - component: {fileID: 65851086282756624}
   - component: {fileID: 65538900657428802}
   - component: {fileID: 114396542062439006}
+  - component: {fileID: 65851271648826494}
   m_Layer: 0
   m_Name: HongoPrefab
   m_TagString: Untagged
@@ -333,6 +352,19 @@ Transform:
   m_Father: {fileID: 4700615787112058}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4570016194182536
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294541891999502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.03, z: 0}
+  m_LocalScale: {x: 13.893258, y: 6.8414664, z: 13.270714}
+  m_Children: []
+  m_Father: {fileID: 4700615787112058}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4606867775083662
 Transform:
   m_ObjectHideFlags: 1
@@ -372,6 +404,7 @@ Transform:
   m_Children:
   - {fileID: 4997142483416726}
   - {fileID: 4460347261220164}
+  - {fileID: 4570016194182536}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -429,6 +462,13 @@ Transform:
   m_Father: {fileID: 4700615787112058}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33279177730563620
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294541891999502}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &65538900657428802
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -440,6 +480,18 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8, y: 8, z: 8}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65761756838730336
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294541891999502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65851086282756624
 BoxCollider:
@@ -453,6 +505,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.4719462, y: 7.239574, z: 7.3859777}
   m_Center: {x: 0, y: 4.0293975, z: 0}
+--- !u!65 &65851271648826494
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355872464939600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 8, z: 8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95621398724324868
 Animator:
   serializedVersion: 3
@@ -681,6 +745,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mensaje: {fileID: 0}
+--- !u!114 &114617246689186946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294541891999502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f23a13b98a48674293b89b609cb1eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oxigeno: {fileID: 0}
+  tiempo: 0
+  tiempoEspera: 1
+  valorRecuperar: 2
 --- !u!137 &137613846224894232
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
