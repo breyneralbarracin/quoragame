@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour {
 	public class UI
 	{
 		public GameObject menuPausa;
-		public GameObject canvas;
 	}
 
 	private bool oxygenFlag;
@@ -35,6 +34,8 @@ public class PlayerController : MonoBehaviour {
 		oxygenFlag = true;
 		timeInSeconds = 0f;
 		pausado = false;
+
+		Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
@@ -78,16 +79,20 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-    private void quitarPausa()
+    public void quitarPausa()
     {
         Time.timeScale = 1;
+
+		ui.menuPausa.SetActive(false);
+		Cursor.visible = false;
     }
 
-    private void pausar()
+    public void pausar()
     {
         Time.timeScale = 0;
 		
-		Instantiate(ui.menuPausa, ui.menuPausa.transform.position, ui.menuPausa.transform.rotation, ui.canvas.transform);
+		ui.menuPausa.SetActive(true);
+		Cursor.visible = true;
     }
 
     public void reduceOxygen(float cantidad)
