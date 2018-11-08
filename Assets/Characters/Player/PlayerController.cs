@@ -57,13 +57,13 @@ public class PlayerController : MonoBehaviour {
 		if(stats.health == 0)
 		{
 			//print("!Has muerto!");
-			Time.timeScale =0;
-			if(Input.GetKeyDown(KeyCode.Return))
-			{
-				Time.timeScale =1;
+			//Time.timeScale =0;
+			//if(Input.GetKeyDown(KeyCode.Return))
+			//{
+				//Time.timeScale =1;
 				SceneManager.LoadScene("escena1");
 				//stats.health = stats.maxHealth;
-			}
+			//}
 		}
 
 		if(Input.GetKeyDown(KeyCode.P))
