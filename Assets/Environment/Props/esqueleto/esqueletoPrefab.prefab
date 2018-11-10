@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23017648153204100}
   - component: {fileID: 64152403418223684}
   m_Layer: 0
-  m_Name: esqueletoPrefab 1
+  m_Name: esqueletoPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
