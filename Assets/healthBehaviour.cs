@@ -7,8 +7,9 @@ public class healthBehaviour : MonoBehaviour {
     // Use this for initialization
 
     public Image health;
+    public PlayerController playerController; 
     float hp, maxHp = 100f;
-    //float amount = 10f;
+    // float amount = 10f;
 
     // Use this for initialization
     void Start()
@@ -31,11 +32,12 @@ public class healthBehaviour : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (hp == 0f)
-        {
-            
-            TakeHealth(100f);
+        health.fillAmount = playerController.stats.health / playerController.stats.maxHealth;
+        // if (hp == 0f)
+        // {
+        //     Debug.Log("Me mori");
+        //     TakeHealth(100f);
 
-        }
+        // }
     }
 }

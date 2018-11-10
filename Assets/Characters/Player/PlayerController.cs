@@ -1,22 +1,42 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
-	public float maxOxygen;
-	public float maxHealth;
-	public float maxHeat;
-	public float oxygen;
-	public float health;
-	public float heat;
+	public Stats stats;
+
+	[System.Serializable]
+	public class Stats
+	{
+		public float maxOxygen;
+		public float maxHealth;
+		public float maxHeat;
+		public float oxygen;
+		public float health;
+		public float heat;
+	}
+
+	public UI ui;
+
+	[System.Serializable]
+	public class UI
+	{
+		public GameObject menuPausa;
+	}
 
 	private bool oxygenFlag;
 	private float timeInSeconds;
+	private bool pausado;
 
 	void Start () {
 		oxygenFlag = true;
 		timeInSeconds = 0f;
+		pausado = false;
+
+		Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
@@ -26,90 +46,132 @@ public class PlayerController : MonoBehaviour {
 		if(timeInSeconds % 4f <= 0.2f && oxygenFlag)
 		{
 			//Debug.Log("reducir vida");
-			reduceOxygen(maxHealth*0.01f);
+			reduceOxygen(stats.maxHealth*0.01f);
 			oxygenFlag = false;
 		}
 		else if(timeInSeconds % 4f > 0.2f)
 		{
 			oxygenFlag = true;
 		}
-	}
 
-	public void reduceOxygen(float cantidad)
-	{
-		if(oxygen > 0)
+		if(stats.health == 0)
 		{
-			oxygen -= cantidad;
+			//print("!Has muerto!");
+			//Time.timeScale =0;
+			//if(Input.GetKeyDown(KeyCode.Return))
+			//{
+				//Time.timeScale =1;
+				SceneManager.LoadScene("escena1");
+				//stats.health = stats.maxHealth;
+			//}
 		}
 
-		if(oxygen < 0)
+		if(Input.GetKeyDown(KeyCode.P))
 		{
-			oxygen = 0;
+			if(!pausado)
+			{
+				pausar();
+				pausado = true;
+			}
+			else
+			{
+				quitarPausa();
+				pausado = false;
+			}	
+		}
+	}
+
+    public void quitarPausa()
+    {
+        Time.timeScale = 1;
+
+		ui.menuPausa.SetActive(false);
+		Cursor.visible = false;
+    }
+
+    public void pausar()
+    {
+        Time.timeScale = 0;
+		
+		ui.menuPausa.SetActive(true);
+		Cursor.visible = true;
+    }
+
+    public void reduceOxygen(float cantidad)
+	{
+		if(stats.oxygen > 0)
+		{
+			stats.oxygen -= cantidad;
+		}
+
+		if(stats.oxygen < 0)
+		{
+			stats.oxygen = 0;
 		}
 	}
 
 	public void increaseOxygen(float cantidad)
 	{
-		if(oxygen < maxOxygen)
+		if(stats.oxygen < stats.maxOxygen)
 		{
-			oxygen += cantidad;
+			stats.oxygen += cantidad;
 		}
 
-		if(oxygen > maxOxygen)
+		if(stats.oxygen > stats.maxOxygen)
 		{
-			oxygen = maxOxygen;
+			stats.oxygen = stats.maxOxygen;
 		}
 	}
 
 	public void reduceHealth(float cantidad)
 	{
-		if(health > 0)
+		if(stats.health > 0)
 		{
-			health -= cantidad;
+			stats.health -= cantidad;
 		}
 
-		if(health < 0)
+		if(stats.health < 0)
 		{
-			health = 0;
+			stats.health = 0;
 		}
 	}
 
 	public void increaseHealth(float cantidad)
 	{
-		if(health < maxHealth)
+		if(stats.health < stats.maxHealth)
 		{
-			health += cantidad;
+			stats.health += cantidad;
 		}
 
-		if(health > maxHealth)
+		if(stats.health > stats.maxHealth)
 		{
-			health = maxHealth;
+			stats.health = stats.maxHealth;
 		}
 	}
 
 	public void reduceHeat(float cantidad)
 	{
-		if(heat > 0)
+		if(stats.heat > 0)
 		{
-			heat -= cantidad;
+			stats.heat -= cantidad;
 		}
 
-		if(heat < 0)
+		if(stats.heat < 0)
 		{
-			heat = 0;
+			stats.heat = 0;
 		}
 	}
 
 	public void increaseHeat(float cantidad)
 	{
-		if(heat < maxHeat)
+		if(stats.heat < stats.maxHeat)
 		{
-			heat += cantidad;
+			stats.heat += cantidad;
 		}
 
-		if(heat > maxHeat)
+		if(stats.heat > stats.maxHeat)
 		{
-			heat = maxHeat;
+			stats.heat = stats.maxHeat;
 		}
 	}
 }
