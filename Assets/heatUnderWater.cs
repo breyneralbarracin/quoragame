@@ -3,20 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class heatUnderWater : MonoBehaviour {
-    GameObject barraCalor;
+   
+    public PlayerController calor;
+    
     private float timer;
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public float tiempoEspera = 8;
+    public float valorAReducir = 2;
 
     void OnTriggerStay(Collider coll)
     {
@@ -24,10 +16,11 @@ public class heatUnderWater : MonoBehaviour {
         {
             timer += Time.deltaTime;
 
-            if (timer >= 10f)
+            if (timer >= tiempoEspera)
             {
-                barraCalor = GameObject.Find("calor");
-                barraCalor.gameObject.GetComponent<Heat>().HeatDamageWater();
+               // barraCalor = GameObject.Find("calor");
+               // barraCalor.gameObject.GetComponent<Heat>().HeatDamageWater();
+                calor.reduceHeat(valorAReducir);
                 timer = 0f;
             }
 
