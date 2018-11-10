@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Unlock : MonoBehaviour {
     public BoxCollider door;
     public BoxCollider door2;
     public Shooting shooting;
     public Light ligh;
-
+    public Text refTextMessage;
 
     bool onswitch=false;
     bool open = false;
@@ -36,6 +37,8 @@ public class Unlock : MonoBehaviour {
                 shooting.enabled = shoot;
                 ligh.color = new Color(37, 240, 30, 255);
                 ligh.intensity = 0.01f;
+                StartCoroutine(MostrarTexto("Sentinel has been deactivated", 0.0f));
+                StartCoroutine(MostrarTexto("Doors have been enabled", 2.0f));
             }
             
         }
@@ -51,5 +54,11 @@ public class Unlock : MonoBehaviour {
         if (other.CompareTag("P1")) {
             onswitch = false;
         }
+    }
+
+    IEnumerator MostrarTexto(string mensaje, float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        refTextMessage.text = mensaje;
     }
 }

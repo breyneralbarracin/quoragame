@@ -1388,6 +1388,11 @@ Prefab:
       propertyPath: calor
       value: 
       objectReference: {fileID: 1485117016}
+    - target: {fileID: 114280011767228160, guid: 24494c73c5738334b9db37f002c27694,
+        type: 2}
+      propertyPath: refTextMessage
+      value: 
+      objectReference: {fileID: 1782664912}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24494c73c5738334b9db37f002c27694, type: 2}
   m_IsPrefabParent: 0
@@ -1792,7 +1797,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4700615787112058, guid: 626ab66e64d297842b3088adad7e9ab0, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114617246689186946, guid: 626ab66e64d297842b3088adad7e9ab0,
         type: 2}
@@ -2538,7 +2543,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1137877151}
-  - component: {fileID: 1137877152}
   m_Layer: 0
   m_Name: Hongos
   m_TagString: Untagged
@@ -2561,18 +2565,6 @@ Transform:
   m_Father: {fileID: 535893519}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1137877152
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1137877150}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1168361752
 Prefab:
   m_ObjectHideFlags: 0
