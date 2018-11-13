@@ -9,11 +9,14 @@ public class BulletExplosion : MonoBehaviour {
     public float Volume = 2.0f;
     public ParticleSystem explosion;
     healthBehaviour vida;
+    public static int Quitarvida;
+    public static bool healthflag;
     GameObject barravida;
     // Use this for initialization
     void Start () {
         scriptShot = GameObject.Find("SentinelHead").GetComponent<Shooting>();
         InitialPosition = transform.position;
+        healthflag = false;
         //explosion = GameObject.Find("Explosion").GetComponent<ParticleSystem>();
     }
 	
@@ -42,7 +45,8 @@ public class BulletExplosion : MonoBehaviour {
             // Debug.Log("Me pego");
             barravida = GameObject.Find("vida");
             barravida.gameObject.GetComponent<healthBehaviour>().TakeDamage(10f);
-            
+            Quitarvida = 10;
+            healthflag = true;
 
         }
 
@@ -52,6 +56,9 @@ public class BulletExplosion : MonoBehaviour {
      
             barravida = GameObject.Find("vida");
             barravida.gameObject.GetComponent<healthBehaviour>().TakeDamage(20f);
+            Quitarvida = 20;
+           
+            healthflag=true;
 
 
         }

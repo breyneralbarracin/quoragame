@@ -30,11 +30,13 @@ public class PlayerController : MonoBehaviour {
 	private bool oxygenFlag;
 	private float timeInSeconds;
 	private bool pausado;
+    
 
 	void Start () {
 		oxygenFlag = true;
 		timeInSeconds = 0f;
 		pausado = false;
+        
 
 		Cursor.visible = false;
 	}
@@ -53,6 +55,11 @@ public class PlayerController : MonoBehaviour {
 		{
 			oxygenFlag = true;
 		}
+        if(stats.health<=100 && BulletExplosion.healthflag==true)
+        {
+            reduceHealth(BulletExplosion.Quitarvida);
+            BulletExplosion.healthflag = false;
+        }
 
 		if(stats.health == 0)
 		{
@@ -101,6 +108,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		if(stats.oxygen > 0)
 		{
+            
 			stats.oxygen -= cantidad;
 		}
 
@@ -125,9 +133,12 @@ public class PlayerController : MonoBehaviour {
 
 	public void reduceHealth(float cantidad)
 	{
+        Debug.Log(stats.health);
 		if(stats.health > 0)
 		{
-			stats.health -= cantidad;
+            print("si entra");
+            stats.health -=cantidad;
+            
 		}
 
 		if(stats.health < 0)

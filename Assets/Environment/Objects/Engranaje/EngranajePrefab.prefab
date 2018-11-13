@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33062111261295812}
   - component: {fileID: 23991216619112306}
   m_Layer: 0
-  m_Name: Engranaje
+  m_Name: EngranajePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
