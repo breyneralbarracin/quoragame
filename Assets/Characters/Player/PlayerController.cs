@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         {
             return this.maxHeat;
         }
-
     }
 
     public UI ui;
@@ -45,6 +44,8 @@ public class PlayerController : MonoBehaviour
 
     private bool oxygenFlag;
     private float timeInSeconds;
+    private float timeWaitHeat;
+    private float timeWaitOxygen;
     private bool pausado;
 
 
@@ -66,7 +67,10 @@ public class PlayerController : MonoBehaviour
         if (timeInSeconds % 4f <= 0.2f && oxygenFlag)
         {
             //Debug.Log("reducir vida");
+
             reduceOxygen(stats.getMaxHealth() * 0.01f);
+            reduceHeat(2);
+
             oxygenFlag = false;
         }
         else if (timeInSeconds % 4f > 0.2f)
@@ -103,6 +107,30 @@ public class PlayerController : MonoBehaviour
                 quitarPausa();
                 pausado = false;
             }
+        }		
+
+        if (stats.heat == 0)
+        {
+            timeWaitHeat += Time.deltaTime;
+
+            if (timeWaitHeat >= 1)
+            {
+                reduceHealth(2);
+                timeWaitHeat = 0f;
+            }
+
+        }
+
+        if (stats.oxygen == 0)
+        {
+            timeWaitOxygen += Time.deltaTime;
+
+            if (timeWaitOxygen >= 1)
+            {
+                reduceHealth(2);
+                timeWaitOxygen = 0f;
+            }
+
         }
     }
 
@@ -151,10 +179,8 @@ public class PlayerController : MonoBehaviour
 
     public void reduceHealth(float cantidad)
     {
-        Debug.Log(stats.health);
         if (stats.health > 0)
         {
-            print("si entra");
             stats.health -= cantidad;
 
         }
