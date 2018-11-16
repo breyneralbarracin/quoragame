@@ -42,24 +42,7 @@ public class BulletExplosion : MonoBehaviour {
 
         if (collision.gameObject.tag == "P1")
         {
-            // Debug.Log("Me pego");
-            barravida = GameObject.Find("vida");
-            barravida.gameObject.GetComponent<healthBehaviour>().TakeDamage(10f);
-            Quitarvida = 10;
-            healthflag = true;
-
-        }
-
-        Vector3 Distance = InitialPosition - transform.position;
-        if (collision.gameObject.tag == "P1" && Distance.sqrMagnitude <= 1000)
-        {
-     
-            barravida = GameObject.Find("vida");
-            barravida.gameObject.GetComponent<healthBehaviour>().TakeDamage(20f);
-            Quitarvida = 20;
-           
-            healthflag=true;
-
+            collision.gameObject.GetComponent<PlayerController>().reduceHealth(10);
 
         }
     }
