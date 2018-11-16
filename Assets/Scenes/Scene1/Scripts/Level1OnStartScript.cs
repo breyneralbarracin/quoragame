@@ -10,6 +10,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class Level1OnStartScript : MonoBehaviour {
 
 	public AudioClip sheThaInstructionsAudioClip;
+    public Canvas canvas;
 	public float delayTimeInSeconds = 3;
 
     public Text refTextMessage;
@@ -62,6 +63,7 @@ public class Level1OnStartScript : MonoBehaviour {
         this.characterRotation = GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().transform.rotation;
         this.cameraPosition = Camera.main.transform.position;
         this.cameraRotation = Camera.main.transform.rotation;
+        canvas.enabled = false;
         GameObject.Find("MainCamera").GetComponent<HeadBob>().enabled = false;
         GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().enabled = false;
         GameObject.Find("MainCamera").GetComponent<CameraRotateAround>().enabled = true;
@@ -77,7 +79,6 @@ public class Level1OnStartScript : MonoBehaviour {
         GameObject.Find("MainCamera").GetComponent<CameraRotateAround>().enabled = false;
         GameObject.Find("MainCamera").GetComponent<HeadBob>().enabled = true;
         GameObject.Find("RigidBodyFPSController").GetComponent<RigidbodyFirstPersonController>().enabled = true;
-
-
+        canvas.enabled = true;
     }
 }

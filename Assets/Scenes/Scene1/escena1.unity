@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04344748, g: 0.04184796, b: 0.044882335, a: 1}
+  m_IndirectSpecularColor: {r: 0.04302211, g: 0.040546037, b: 0.04448349, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -186,6 +186,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4846734634747316, guid: 532a4dd50a15c3b4fb8c56470ae88c6e,
     type: 2}
   m_PrefabInternal: {fileID: 48710478}
+--- !u!223 &68284003 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223833370196039696, guid: 7ff68b1d7ec61f24894e865630e10998,
+    type: 2}
+  m_PrefabInternal: {fileID: 446868347}
 --- !u!1 &113987150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,6 +1398,26 @@ Prefab:
       propertyPath: refTextMessage
       value: 
       objectReference: {fileID: 1782664912}
+    - target: {fileID: 137425420213117308, guid: 24494c73c5738334b9db37f002c27694,
+        type: 2}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 137425420213117308, guid: 24494c73c5738334b9db37f002c27694,
+        type: 2}
+      propertyPath: m_AABB.m_Extent.x
+      value: 5.123864
+      objectReference: {fileID: 0}
+    - target: {fileID: 137037373638184900, guid: 24494c73c5738334b9db37f002c27694,
+        type: 2}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 137037373638184900, guid: 24494c73c5738334b9db37f002c27694,
+        type: 2}
+      propertyPath: m_AABB.m_Extent.x
+      value: 5.123864
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24494c73c5738334b9db37f002c27694, type: 2}
   m_IsPrefabParent: 0
@@ -2149,8 +2174,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1082117848}
-  m_LocalRotation: {x: 0.18639603, y: 0.7687793, z: 0.25845304, w: -0.55447006}
-  m_LocalPosition: {x: 138.9514, y: -7.950288, z: 192.80728}
+  m_LocalRotation: {x: 0.028866481, y: 0.95715666, z: 0.10262419, w: -0.26923257}
+  m_LocalPosition: {x: 132.28474, y: 1.0299149, z: 179.57239}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2481,6 +2506,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   calor: {fileID: 1485117016}
+  tiempoEspera: 8
+  valorAReducir: 2
 --- !u!65 &1107678871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3080,6 +3107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sheThaInstructionsAudioClip: {fileID: 8300000, guid: f6a0032842cda594ebd0a1624568b406,
     type: 3}
+  canvas: {fileID: 68284003}
   delayTimeInSeconds: 3
   refTextMessage: {fileID: 1782664912}
 --- !u!82 &1756769868
