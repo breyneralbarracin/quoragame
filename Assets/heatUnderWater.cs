@@ -7,8 +7,8 @@ public class heatUnderWater : MonoBehaviour {
     public PlayerController calor;
     
     private float timer;
-    public float tiempoEspera = 8;
-    public float valorAReducir = 2;
+    public float tiempoEspera = 10;
+    public float valorAReducir = 4;
 
     void OnTriggerStay(Collider coll)
     {
