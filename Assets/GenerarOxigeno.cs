@@ -12,7 +12,7 @@ public class GenerarOxigeno : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "P1" && oxigeno.stats.oxygen < oxigeno.stats.maxOxygen)
+        if (other.gameObject.tag == "P1" && oxigeno.stats.oxygen < oxigeno.stats.getMaxOxygen())
         {
             oxigeno.increaseOxygen(valorRecuperar);
 
@@ -20,7 +20,7 @@ public class GenerarOxigeno : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "P1" && oxigeno.stats.oxygen < oxigeno.stats.maxOxygen)
+        if (other.gameObject.tag == "P1" && oxigeno.stats.oxygen < oxigeno.stats.getMaxOxygen())
         {
             tiempo += Time.deltaTime;
 

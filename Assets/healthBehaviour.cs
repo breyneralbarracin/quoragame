@@ -33,7 +33,7 @@ public class healthBehaviour : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        health.fillAmount = playerController.stats.health / playerController.stats.maxHealth;
+        health.fillAmount = playerController.stats.health / playerController.stats.getMaxHealth();
         // if (hp == 0f)
         // {
         //     Debug.Log("Me mori");
