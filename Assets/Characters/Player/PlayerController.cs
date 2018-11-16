@@ -12,12 +12,26 @@ public class PlayerController : MonoBehaviour
     [System.Serializable]
     public class Stats
     {
-        public float maxOxygen;
-        public float maxHealth;
-        public float maxHeat;
+        private float maxOxygen = 100f;
+        private float maxHealth = 100f;
+        private float maxHeat = 100f;
         public float oxygen;
         public float health;
         public float heat;
+
+        public float getMaxOxygen()
+        {
+            return this.maxOxygen;
+        }
+        public float getMaxHealth()
+        {
+            return this.maxHealth;
+        }
+
+        public float getMaxHeat()
+        {
+            return this.maxHeat;
+        }
     }
 
     public UI ui;
@@ -53,8 +67,10 @@ public class PlayerController : MonoBehaviour
         if (timeInSeconds % 4f <= 0.2f && oxygenFlag)
         {
             //Debug.Log("reducir vida");
-            reduceOxygen(stats.maxHealth * 0.01f);
+
+            reduceOxygen(stats.getMaxHealth() * 0.01f);
             reduceHeat(2);
+
             oxygenFlag = false;
         }
         else if (timeInSeconds % 4f > 0.2f)
@@ -91,9 +107,7 @@ public class PlayerController : MonoBehaviour
                 quitarPausa();
                 pausado = false;
             }
-        }
-
-		
+        }		
 
         if (stats.heat == 0)
         {
@@ -152,23 +166,21 @@ public class PlayerController : MonoBehaviour
 
     public void increaseOxygen(float cantidad)
     {
-        if (stats.oxygen < stats.maxOxygen)
+        if (stats.oxygen < stats.getMaxOxygen())
         {
             stats.oxygen += cantidad;
         }
 
-        if (stats.oxygen > stats.maxOxygen)
+        if (stats.oxygen > stats.getMaxOxygen())
         {
-            stats.oxygen = stats.maxOxygen;
+            stats.oxygen = stats.getMaxOxygen();
         }
     }
 
     public void reduceHealth(float cantidad)
     {
-        //        Debug.Log(stats.health);
         if (stats.health > 0)
         {
-            // print("si entra");
             stats.health -= cantidad;
 
         }
@@ -181,14 +193,14 @@ public class PlayerController : MonoBehaviour
 
     public void increaseHealth(float cantidad)
     {
-        if (stats.health < stats.maxHealth)
+        if (stats.health < stats.getMaxHealth())
         {
             stats.health += cantidad;
         }
 
-        if (stats.health > stats.maxHealth)
+        if (stats.health > stats.getMaxHealth())
         {
-            stats.health = stats.maxHealth;
+            stats.health = stats.getMaxHealth();
         }
     }
 
@@ -207,14 +219,14 @@ public class PlayerController : MonoBehaviour
 
     public void increaseHeat(float cantidad)
     {
-        if (stats.heat < stats.maxHeat)
+        if (stats.heat < stats.getMaxHeat())
         {
             stats.heat += cantidad;
         }
 
-        if (stats.heat > stats.maxHeat)
+        if (stats.heat > stats.getMaxHeat())
         {
-            stats.heat = stats.maxHeat;
+            stats.heat = stats.getMaxHeat();
         }
     }
 }
