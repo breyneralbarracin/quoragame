@@ -25,20 +25,6 @@ public class Chase : MonoBehaviour
     {
 
         Vector3 direction = currentPatrolPoint.position - transform.position;
-
-        if (Vector3.Distance(currentPatrolPoint.position, transform.position) < 5.0f)
-        {
-            if (currentPatrolIndex + 1 < patrolPoints.Length)
-            {
-                currentPatrolIndex++;
-            }
-            else
-            {
-                currentPatrolIndex = 0;
-            }
-            currentPatrolPoint = patrolPoints[currentPatrolIndex];
-        }
-
         this.transform.Translate(0, 0, Time.deltaTime * speed);
         this.transform.rotation = Quaternion.Slerp(transform.rotation,
         Quaternion.LookRotation(direction), 0.1f);
@@ -54,7 +40,20 @@ public class Chase : MonoBehaviour
             {
                 this.transform.Translate(0, 0, 0.11f);
             }
+        }else if(Vector3.Distance(currentPatrolPoint.position, transform.position) < 5.0f)
+        {
+            if (currentPatrolIndex + 1 < patrolPoints.Length)
+            {
+                currentPatrolIndex++;
+            }
+            else
+            {
+                currentPatrolIndex = 0;
+            }
+            currentPatrolPoint = patrolPoints[currentPatrolIndex];
         }
+
+        
 
     }
 }
