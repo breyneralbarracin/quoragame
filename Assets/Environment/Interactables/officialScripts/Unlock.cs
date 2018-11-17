@@ -39,6 +39,7 @@ public class Unlock : MonoBehaviour {
                 ligh.intensity = 0.01f;
                 StartCoroutine(MostrarTexto("Sentinel has been deactivated", 0.0f));
                 StartCoroutine(MostrarTexto("Doors have been enabled", 2.0f));
+                StartCoroutine(MostrarTexto("", 7.0f));
             }
             
         }
