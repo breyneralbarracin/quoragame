@@ -13,12 +13,7 @@ public class elevate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		while (true)
-		{
-			Elevate();	
-		}
-		
+        Elevate();	
 	}
 
 	IEnumerator Elevate(){
